@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import {motion} from 'framer-motion';
+import { BsStars } from "react-icons/bs";
+import ListOfUsers from './ListOfUsers';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <motion.h1 whileHover={{scale:1.7}}><BsStars />  LIST-OF-USERS...  <BsStars /></motion.h1>
+        <ListOfUsers/>
     </div>
   );
 }
