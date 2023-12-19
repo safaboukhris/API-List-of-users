@@ -14,7 +14,7 @@ const ListOfUsers = () => {
                     setUsers(response.data);
                 })
                 .catch(err => setError(err))
-        })
+        },[])
 
             //showing data in a card 
     return (
@@ -25,13 +25,14 @@ const ListOfUsers = () => {
                         <div className="face back">
                             <div className="content">
                                 <span className="stars"></span>
-                                <p className="desc"><span>ID :</span> {user.id}</p>
                                 <p className="desc"><span>USER NAME :</span> {user.username}</p>
                                 <p className="desc"><span>EMAIL :</span> {user.email}</p>
                                 <p className="desc"><span>CITY :</span> {user.address.city}</p>
                                 <p className="desc"><span>ADDRESS :</span> {user.address.street}</p>
                                 <p className="desc"><span>SUITE :</span> {user.address.suite}</p>
                                 <p className="desc"><span>ZIP CODE :</span> {user.address.zipcode}</p>
+                                <p className="desc"><span>GEO lAT :</span> {user.address.geo.lat}</p>
+                                <p className="desc"><span>GEO lNG :</span> {user.address.geo.lng}</p>
                                 <p className="desc"><span>PHONE :</span> {user.phone}</p>
                                 <p className="desc"><span>Website : </span>{user.website}</p>
                                 <p className="desc"><span>COMPANY : </span>{user.company.name}</p>
